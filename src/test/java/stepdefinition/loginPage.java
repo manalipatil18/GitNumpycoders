@@ -5,17 +5,18 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import Utilities.BaseClass;
+import Utilities.Helper;
+//import Utilities.BaseClass;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.Login;
 
-public class loginPage{
-	
-	WebDriver chromedriver = null;
-	Login fromloginjava;
+//public class loginPage{
+	public class loginPage extends Bclass{	
+	//WebDriver chromedriver = null;
+//	Login fromloginjava;
 	
 	
 //	@Given("browser is open")
@@ -33,13 +34,16 @@ public class loginPage{
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		
-		chromedriver = new ChromeDriver();
+		/*chromedriver = new ChromeDriver();
 	    chromedriver.manage().window().maximize();
 		chromedriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		chromedriver.get("https://dsportalapp.herokuapp.com/home"); 
 	
 	    fromloginjava = new Login(chromedriver);
-	    fromloginjava.Signinstep();
+	    fromloginjava.Signinstep();*/
+		fromloginjava = new Login(Helper.getDriver()); 
+		Helper.openPage();
+		//fromloginjava.Signinstep();
 	}
 
 	@When("^user enters(.*) and (.*)$")

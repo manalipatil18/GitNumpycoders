@@ -10,15 +10,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import Utilities.BaseClass;
+import stepdefinition.Bclass;
 
 import org.testng.Assert;
 
 
 //import stepdefinition.loginPage;
 
-public class Login{
+//public class Login {
+//WebDriver chromedriver;
+	public class Login extends Bclass{
 	
-	WebDriver chromedriver;
 	
 	By loginBtn = By.xpath("//a[text()='Sign in']");
 	By Uname = By.name("username");
@@ -31,6 +33,11 @@ public class Login{
 	By InvalidPasserr = By.xpath("//div[@class='alert alert-primary']");
 	By SignoutBtn = By.xpath("//a[text()='Sign out']");
 	
+	
+	/*public Login(WebDriver chromedriver) {
+		this.chromedriver = chromedriver;
+	}*/
+	private WebDriver chromedriver;
 	public Login(WebDriver chromedriver) {
 		this.chromedriver = chromedriver;
 	}
