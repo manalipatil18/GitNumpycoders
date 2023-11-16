@@ -24,12 +24,12 @@ Feature: Handling datastructure options
     And User clicks Run to execute code
     Then User gets a error message and dismisses it
     
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User lands on tryEditor page
-    #When User enters python code to run on editor
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+    And User clicks Run to execute code
+    Then User gets a valid output
 
     
   

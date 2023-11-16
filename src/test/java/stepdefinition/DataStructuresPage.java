@@ -79,11 +79,9 @@ public void user_lands_on_try_editor_page() {
     fromDSjava.onTryeditorpage();
 }
 
-
-@When("User enters python code to run on editor")
-public void user_enters_python_code_to_run_on_editor() throws InterruptedException {
-	
-	fromDSjava.enterpythoncode();
+@When("User enters invalid code to run on editor")
+public void user_enters_invalid_code_to_run_on_editor() throws InterruptedException {
+	fromDSjava.enterinvalidcode();
 }
 
 @And("User clicks Run to execute code")
@@ -91,20 +89,32 @@ public void user_clicks_run_to_execute_code() throws InterruptedException {
     Helper.RunBtn();
 }
 
+@Then("User gets a error message and dismisses it")
+public void user_gets_a_error_message_and_dismisses_it() throws InterruptedException {
+	fromDSjava.InValidOutputmessage();
+}
+
+@Given("User is on tryEditor page")
+public void user_is_on_try_editor_page() {
+	fromDSjava = new Datastructure (Helper.getDriver());
+     Helper.NavBack();
+     Helper.Tryherebttn();
+}
+
+@When("User enters python code to run on editor")
+public void user_enters_python_code_to_run_on_editor() throws InterruptedException {
+	
+	fromDSjava.enterpythoncode();
+}
+
+
 @Then("User gets a valid output")
 public void user_gets_a_valid_output() {
 	fromDSjava.ValidOutput();
 }
 
-@When("User enters invalid code to run on editor")
-public void user_enters_invalid_code_to_run_on_editor() throws InterruptedException {
-	fromDSjava.enterinvalidcode();
-}
 
-@Then("User gets a error message and dismisses it")
-public void user_gets_a_error_message_and_dismisses_it() throws InterruptedException {
-	fromDSjava.InValidOutputmessage();
-}
+
 
 
 }
