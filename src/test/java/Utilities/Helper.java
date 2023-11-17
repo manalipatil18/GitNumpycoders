@@ -42,6 +42,12 @@ public class Helper {
     	driver.findElement(By.xpath("//a[text()='Try here>>>']")).click();
     }
     
+    public static void RunBtn() throws InterruptedException {
+    	  
+ 		driver.findElement(By.xpath("//*[@id='answer_form']/button")).click();
+ 		 Thread.sleep(3000);
+    }
+    
     public static void setUpDriver() {
         if (Helper==null) {
             Helper = new Helper();

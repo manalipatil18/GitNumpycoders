@@ -1,18 +1,17 @@
 package pageobjects;
 
-import java.time.Duration;
 
+import java.util.List;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import Utilities.Helper;
+import io.cucumber.datatable.DataTable;
 import stepdefinition.Bclass;
 
-//public class Datastructure {
-	//WebDriver chromedriver;
+
 public class Datastructure extends Bclass{
 	
 //	By Getstbttn = By.xpath("//a[text()='Get Started']");
@@ -20,7 +19,7 @@ public class Datastructure extends Bclass{
 	By PQbtn = By.xpath("//a[text()='Practice Questions']");
 	By Textarea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
 //	By Textarea = By.xpath("//*[@id='answer_form']//*[contains(@class,'CodeMirror')]/*/textarea");
-	//By Textarea1 = By.xpath("//*[@id='answer_form']//*[contains(@class,'CodeMirror')]/*/pre/span");
+	
 	
 	private WebDriver chromedriver;
 	public Datastructure(WebDriver chromedriver) {
@@ -81,10 +80,22 @@ public class Datastructure extends Bclass{
     }
     
     
-    public void enterinvalidcode() throws InterruptedException {
+//    public void enterinvalidcode() throws InterruptedException {
+//    	
+//    	chromedriver.findElement(Textarea).sendKeys("System.out.println(\"Hi Java\");");
+// 		 Thread.sleep(2000);
+//
+//    }  	 
+// 		 
+    public void enterinvalidcode(DataTable table) throws InterruptedException {
     	
-    	chromedriver.findElement(Textarea).sendKeys("System.out.println(\"Hi Java\");");
- 		 Thread.sleep(2000);
+    	
+    	List<String> codedata = table.asList();
+    	 String Coded = codedata.get(0);
+  
+    	//chromedriver.findElement(Textarea).sendKeys("System.out.println(\"Hi Java\");");
+    	 chromedriver.findElement(Textarea).sendKeys(Coded);
+ 		 Thread.sleep(1000);
 
     }  	 
  		 
@@ -92,20 +103,20 @@ public class Datastructure extends Bclass{
     public void InValidOutputmessage() throws InterruptedException {
     	
     	Alert alert = chromedriver.switchTo().alert();
-
     	String alertMessage= chromedriver.switchTo().alert().getText(); 
-
     	System.out.println(alertMessage); 
     	Thread.sleep(1000);
     	alert.accept();
-//    	Thread.sleep(2000);
-//    	chromedriver.findElement(Textarea1).clear();
+
     }
  		
-    public void enterpythoncode() throws InterruptedException {
+    public void enterpythoncode(DataTable table1) throws InterruptedException {
     
-    	chromedriver.findElement(Textarea).sendKeys("print 'hello';");
- 		 Thread.sleep(2000);
+    	List<String> codedata1 = table1.asList();
+   	    String Code1 = codedata1.get(0);
+    	//chromedriver.findElement(Textarea).sendKeys("System.out.println(\"Hi Java\");");
+   	    chromedriver.findElement(Textarea).sendKeys(Code1);
+ 	    Thread.sleep(1000);
 
     }  
     

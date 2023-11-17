@@ -2,6 +2,7 @@ package stepdefinition;
 
 
 import Utilities.Helper;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -80,8 +81,8 @@ public void user_lands_on_try_editor_page() {
 }
 
 @When("User enters invalid code to run on editor")
-public void user_enters_invalid_code_to_run_on_editor() throws InterruptedException {
-	fromDSjava.enterinvalidcode();
+public void user_enters_invalid_code_to_run_on_editor(DataTable table) throws InterruptedException {
+	fromDSjava.enterinvalidcode(table);
 }
 
 @And("User clicks Run to execute code")
@@ -102,9 +103,9 @@ public void user_is_on_try_editor_page() {
 }
 
 @When("User enters python code to run on editor")
-public void user_enters_python_code_to_run_on_editor() throws InterruptedException {
+public void user_enters_python_code_to_run_on_editor(DataTable table1) throws InterruptedException {
 	
-	fromDSjava.enterpythoncode();
+	fromDSjava.enterpythoncode(table1);
 }
 
 

@@ -74,7 +74,7 @@ import org.testng.Assert;
 		//Get the name of the valid user
 		WebElement Vusername = chromedriver.findElement(Validusername);
 		String Vusenametext=(Vusername).getText();
-		System.out.println( Vusenametext );
+		System.out.println( "Username:" + Vusenametext );
 	  }
 	
 	
