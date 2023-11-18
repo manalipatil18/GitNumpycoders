@@ -7,12 +7,6 @@ Feature: Handling datastructure options
     And User clicks Time Complexity
     Then user gets into time Complexity page of DS
 
-  Scenario: User clicks on Practice Question page and return to TC page
-    Given user gets into time Complexity page of DS
-    When User clicks Practice Questions button
-    And user gets into Practice Questions of DS
-    Then user navigates back to time complexity page
-
   Scenario: User redirected to try me page to run code
     Given user gets into time Complexity page of DS
     When User clicks on try me button
@@ -28,6 +22,12 @@ Feature: Handling datastructure options
   Scenario: User redirected to try me page to run python code
     Given User is on tryEditor page
     When User enters python code to run on editor
-     | print 'hello'; |
+      | print 'hello'; |
     And User clicks Run to execute code
     Then User gets a valid output
+
+  Scenario: User clicks on Practice Question page and return to TC page
+    Given user gets back on time Complexity page of DS
+    When User clicks Practice Questions button
+    And user gets into Practice Questions of DS
+    Then user navigates back and clicks signs out

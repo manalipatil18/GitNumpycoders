@@ -14,10 +14,11 @@ public class LinkedListPage extends Bclass{
 public void user_is_logged_in_and_is_on_home_page() {
 	fromLLjava = new Linkedlistcode(Helper.getDriver());
 	Helper.openPage();
-	fromLLjava.ValidLogin1();
+	Helper.ValidLogin();
 }
 
 @When("User clicks on Link list option from the dropdown menu")
+
 public void user_clicks_on_link_list_option_from_the_dropdown_menu() {
 	fromLLjava.selectLL();
 }
@@ -156,9 +157,9 @@ public void user_gets_into_practice_questions_of_linked_list() {
 	fromLLjava.OnPQLLpage();
 }
 
-@Then("user navigates back and signs out")
-public void user_navigates_back_and_signs_out() {
-	fromLLjava.SignoutBtn();
-}
+//@Then("user navigates back and signs out")
+//public void user_navigates_back_and_signs_out() {
+//	fromLLjava.SignoutBtn();
+//}
 
 }

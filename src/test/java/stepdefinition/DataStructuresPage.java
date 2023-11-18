@@ -24,7 +24,7 @@ public void user_is_logged_in_and_on_home_page() {
 //	chromedriver.findElement(By.xpath(("//a[text()='Sign in']"))).click();
 	fromDSjava = new Datastructure (Helper.getDriver());
 	Helper.openPage();
-	fromDSjava.ValidLogin();
+	Helper.ValidLogin();
 	
 
 }
@@ -54,20 +54,6 @@ public void user_gets_into_time_complexity_page_of_ds() {
 }
 
 
-@When("User clicks Practice Questions button")
-public void user_clicks_practice_questions_button() {
-	fromDSjava.PracticeQuesBtn();
-}
-
-@And("user gets into Practice Questions of DS")
-public void user_gets_into_practice_questions_of_ds() {
-	fromDSjava.OnPQpage();
-}
-
-@Then("user navigates back to time complexity page")
-public void user_navigates_back_to_time_complexity_page() {
-    Helper.NavBack();
-}
 
 @When("User clicks on try me button")
 public void user_clicks_on_try_me_button() {
@@ -114,7 +100,28 @@ public void user_gets_a_valid_output() {
 	fromDSjava.ValidOutput();
 }
 
+@Given("user gets back on time Complexity page of DS")
+public void user_gets_back_on_time_complexity_page_of_ds() {
+	fromDSjava = new Datastructure (Helper.getDriver());
+    Helper.NavBack();
+    fromDSjava.OnTCpage();
+}
 
+@When("User clicks Practice Questions button")
+public void user_clicks_practice_questions_button() {
+	fromDSjava.PracticeQuesBtn();
+}
+
+@And("user gets into Practice Questions of DS")
+public void user_gets_into_practice_questions_of_ds() {
+	fromDSjava.OnPQpage();
+}
+
+@Then("user navigates back and clicks signs out")
+public void user_navigates_back_and_clicks_signs_out() {
+	Helper.NavBack();
+	Helper.SignOutBtn();
+    }
 
 
 

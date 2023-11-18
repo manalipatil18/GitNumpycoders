@@ -2,6 +2,8 @@ package pageobjects;
 
 
 import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +21,7 @@ public class Datastructure extends Bclass{
 	By PQbtn = By.xpath("//a[text()='Practice Questions']");
 	By Textarea = By.xpath("//form[@id='answer_form']/div/div/div/textarea");
 //	By Textarea = By.xpath("//*[@id='answer_form']//*[contains(@class,'CodeMirror')]/*/textarea");
-	
+	By signoutbttn =By.xpath("//a[text()='Sign out']");
 	
 	private WebDriver chromedriver;
 	public Datastructure(WebDriver chromedriver) {
@@ -27,13 +29,13 @@ public class Datastructure extends Bclass{
 	}
 	
 	
-	public void ValidLogin() {
-		WebElement uname = chromedriver.findElement(By.name("username"));
-		uname.sendKeys("NinjaCoders");
-		WebElement pword = chromedriver.findElement(By.name("password"));
-		pword.sendKeys("SDET135batch");
-		chromedriver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
-	}
+//	public void ValidLogin() {
+//		WebElement uname = chromedriver.findElement(By.name("username"));
+//		uname.sendKeys("NinjaCoders");
+//		WebElement pword = chromedriver.findElement(By.name("password"));
+//		pword.sendKeys("SDET135batch");
+//		chromedriver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
+//	}
 	
 //	public void getstartedbutton() {
 //		chromedriver.findElement(Getstbttn).click();
@@ -117,6 +119,12 @@ public class Datastructure extends Bclass{
     	//chromedriver.findElement(Textarea).sendKeys("System.out.println(\"Hi Java\");");
    	    chromedriver.findElement(Textarea).sendKeys(Code1);
  	    Thread.sleep(1000);
+//    	List<String> user = table1.asList();
+//        
+//        	     	String pycode = user.get(0);
+//        	     	String pycode1 = user.get(1);
+//        	     	chromedriver.findElement(Textarea).sendKeys(pycode);
+//        	     	chromedriver.findElement(Textarea).sendKeys(pycode1);
 
     }  
     
@@ -132,7 +140,10 @@ public class Datastructure extends Bclass{
     }
  		 
  		 
-	 
+//    public void SignoutBttn() {
+//		Helper.NavBack();
+//		Helper.SignOutBtn();
+//	}
  		 
  	
  		 

@@ -21,20 +21,20 @@ public class Linkedlistcode extends Bclass{
 	By InsertionLbttn = By.xpath("//a[text()='Insertion']");
 	By DeletionLbttn= By.xpath("//a[text()='Deletion']");
 	By PQLLbttn= By.xpath("//a[text()='Practice Questions']");
-	By Signoutbttn =By.xpath("//a[text()='Sign out']");
+	//By Signoutbttn =By.xpath("//a[text()='Sign out']");
 	
 	private WebDriver chromedriver;
 	public Linkedlistcode(WebDriver chromedriver) {
 		this.chromedriver = chromedriver;
 	}
 	
-	public void ValidLogin1() {
-		WebElement uname = chromedriver.findElement(By.name("username"));
-		uname.sendKeys("NinjaCoders");
-		WebElement pword = chromedriver.findElement(By.name("password"));
-		pword.sendKeys("SDET135batch");
-		chromedriver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
-	}
+//	public void ValidLogin1() {
+//		WebElement uname = chromedriver.findElement(By.name("username"));
+//		uname.sendKeys("NinjaCoders");
+//		WebElement pword = chromedriver.findElement(By.name("password"));
+//		pword.sendKeys("SDET135batch");
+//		chromedriver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
+//	}
 	
 	public void selectLL() {
 		chromedriver.findElement(LLbtn).click();
@@ -75,7 +75,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnCreateLLPage() {
 		String actualTitleCLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleCLL);
 		String ExpectedTitleCLL = "Creating Linked LIst";
 		Assert.assertEquals(actualTitleCLL, ExpectedTitleCLL, "Condition true");
 	}
@@ -86,7 +86,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnTypeofLLPage() {
 		String actualTitleTOLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleTOLL);
 		String ExpectedTitleTOLL = "Types of Linked List";
 		Assert.assertEquals(actualTitleTOLL, ExpectedTitleTOLL, "Condition true");
 	}
@@ -97,7 +97,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnImplementLLPage() {
 		String actualTitleIMLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleIMLL);
 		String ExpectedTitleIMLL = "Implement Linked List in Python";
 		Assert.assertEquals(actualTitleIMLL, ExpectedTitleIMLL, "Condition true");
 	}
@@ -108,7 +108,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnTraversalLLPage() {
 		String actualTitleTLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleTLL);
 		String ExpectedTitleTLL = "Traversal";
 		Assert.assertEquals(actualTitleTLL, ExpectedTitleTLL, "Condition true");
 	}
@@ -119,7 +119,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnInsertionLLPage() {
 		String actualTitleINLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleINLL);
 		String ExpectedTitleINLL = "Insertion";
 		Assert.assertEquals(actualTitleINLL, ExpectedTitleINLL, "Condition true");
 	}
@@ -130,7 +130,7 @@ public class Linkedlistcode extends Bclass{
 
 	public void OnDeletionLLPage() {
 		String actualTitleDLL =Helper.getTitle();
-		//System.out.println(actualTitleIntro);
+		//System.out.println(actualTitleDLL);
 		String ExpectedTitleDLL = "Deletion";
 		Assert.assertEquals(actualTitleDLL, ExpectedTitleDLL, "Condition true");
 	}
@@ -147,8 +147,9 @@ public class Linkedlistcode extends Bclass{
 	    	Assert.assertEquals(actualTitlePQLL, expectedTitlePQLL, "Condition true");
 	    	}
 
-	public void SignoutBtn() {
-		Helper.NavBack();
-		chromedriver.findElement(Signoutbttn).click();
-	}
+//	public void SignoutBtn() {
+//		Helper.NavBack();
+//		Helper.SignOutBtn();
+		//chromedriver.findElement(Signoutbttn).click();
+	//}
 }
