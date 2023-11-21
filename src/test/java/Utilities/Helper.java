@@ -54,7 +54,7 @@ public class Helper {
     public static void RunBtn() throws InterruptedException {
     	  
  		driver.findElement(By.xpath("//*[@id='answer_form']/button")).click();
- 		 Thread.sleep(3000);
+ 		 Thread.sleep(1000);
     }
     
     public static void SignOutBtn() {

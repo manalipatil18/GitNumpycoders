@@ -12,27 +12,27 @@ Feature: Handling queue options
     When User clicks on try me button
     Then User lands on tryEditor page
 
-  #Scenario Outline: User redirected to try me page to run invalid code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         0 |
-      #| TestCode  |         1 |
-#
-  #Scenario Outline: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a valid output
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         2 |
-      #| TestCode  |         3 |
+  Scenario Outline: User redirected to try me page to run invalid code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         0 |
+      | TestCode  |         1 |
+
+  Scenario Outline: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a valid output
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         2 |
+      | TestCode  |         3 |
 
     Scenario: User gets into Implementation using collections.deque page and uses the try me button
     Given User gets back on Implementation of queue in python page
@@ -41,27 +41,27 @@ Feature: Handling queue options
     And User clicks on try me button
     Then User lands on tryEditor page   
     
-     #Scenario Outline: User redirected to try me page to run invalid code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
+     Scenario Outline: User redirected to try me page to run invalid code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
 
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         0 |
-      #| TestCode  |         1 |
-#
-  #Scenario Outline: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a valid output
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         2 |
-      #| TestCode  |         3 |
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         0 |
+      | TestCode  |         1 |
+
+  Scenario Outline: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a valid output
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         2 |
+      | TestCode  |         3 |
       
     Scenario: User gets into Implementation using array page and uses the try me button
     Given User gets back Implementation using collections.deque page
@@ -70,28 +70,28 @@ Feature: Handling queue options
     And User clicks on try me button
     Then User lands on tryEditor page   
     
-     #Scenario Outline: User redirected to try me page to run invalid code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         0 |
-      #| TestCode  |         1 |
-#
-  #Scenario Outline: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a valid output
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         2 |
-      #| TestCode  |         3 |
-       #
+     Scenario Outline: User redirected to try me page to run invalid code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         0 |
+      | TestCode  |         1 |
+
+  Scenario Outline: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a valid output
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         2 |
+      | TestCode  |         3 |
+       
     Scenario: User gets into Queue Operations page and uses the try me button
     Given User gets back Implementation using array page
     When User clicks on Queue Operations
@@ -100,28 +100,28 @@ Feature: Handling queue options
     Then User lands on tryEditor page  
     
     
-      #Scenario Outline: User redirected to try me page to run invalid code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         0 |
-      #| TestCode  |         1 |
-#
-  #Scenario Outline: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When The user enters sheet "<Sheetname>" and <RowNumber>
-    #And User clicks Run to execute code
-    #Then User gets a valid output
-#
-    #Examples: 
-      #| Sheetname | RowNumber |
-      #| TestCode  |         2 |
-      #| TestCode  |         3 |
-      #
+      Scenario Outline: User redirected to try me page to run invalid code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         0 |
+      | TestCode  |         1 |
+
+  Scenario Outline: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When The user enters sheet "<Sheetname>" and <RowNumber>
+    And User clicks Run to execute code
+    Then User gets a valid output
+
+    Examples: 
+      | Sheetname | RowNumber |
+      | TestCode  |         2 |
+      | TestCode  |         3 |
+      
     Scenario: User gets into Practice question page and signs out
     Given User gets back on Queue Operations from Deletion page
     When User clicks Practice Questions button of Queues 

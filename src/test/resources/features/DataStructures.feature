@@ -9,6 +9,7 @@ Feature: Handling datastructure options
 
   Scenario: User redirected to try me page to run code
     Given user gets into time Complexity page of DS
+    Given user gets into time Complexity page of DS
     When User clicks on try me button
     Then User lands on tryEditor page
 
