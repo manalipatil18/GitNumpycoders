@@ -39,8 +39,7 @@ public class Hooks {
 
 	/*@Before
 	public static void setUp() {
-
-		Helper.setUpDriver();
+    	Helper.setUpDriver();
 	}*/
 
 }
