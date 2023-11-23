@@ -11,6 +11,17 @@ Feature: Sign In feature
       | Ninja       | SDET135batch | Error message displayed |
       | NinjaCoders | SDET         | Error message displayed |
 
+  Scenario Outline: User on login page and username passowrd are blank
+    Given user is on login page
+    When user enters <username> and <password>
+    And user clicks on login
+    Then <Outcome>
+   
+    Examples: Blank username password
+      | username | password | Outcome                         |
+      |          |          | Please fill field error message |
+      | Ninja    |          | Please fill field error message |
+
   Scenario Outline: User on login page and login with valid username and valid password
     Given user is on login page
     When user enters <username> and <password>

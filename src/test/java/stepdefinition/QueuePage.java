@@ -27,31 +27,31 @@ public class QueuePage extends Bclass{
 
 	@Then("User is on Queue page")
 	public void user_is_on_queue_page() {
-	    fromQjava.OnQueuemainpage();
+		fromQjava.OnQueuemainpage();
 	}
 
 	@And("User clicks Implementation of queue in Python")
 	public void user_clicks_implementation_of_queue_in_python() {
-	    fromQjava.ImpleBttn();
+		fromQjava.ImpleBttn();
 	}
 
 	@Then("user gets into Implementation of queue in Python page")
 	public void user_gets_into_implementation_of_queue_in_python_page() {
-	    fromQjava.OnImplepage();
+		fromQjava.OnImplepage();
 	}
-	
+
 	@Given("user is on Implementation of queue in Python page")
 	public void user_is_on_implementation_of_queue_in_python_page() {
 		fromQjava = new Queue(Helper.getDriver());
 		fromQjava.OnImplepage();
 	}
-	
+
 	@When("The user enters sheet {string} and {int}")
 	public void the_user_enters_sheet_and(String Sheetname, Integer RowNumber) throws InvalidFormatException, IOException, InterruptedException {
 		fromQjava = new Queue(Helper.getDriver());
 		fromQjava.Readpythoncode(Sheetname, RowNumber);
 	}
-	
+
 	@Given("User gets back on Implementation of queue in python page")
 	public void user_gets_back_on_implementation_of_queue_in_python_page() {
 		fromQjava = new Queue(Helper.getDriver());
@@ -68,7 +68,7 @@ public class QueuePage extends Bclass{
 	public void user_lands_on_implementation_using_collections_deque_page() {
 		fromQjava.OnImpleUsingCollpage();
 	}
-	
+
 	@Given("User gets back Implementation using collections.deque page")
 	public void user_gets_back_implementation_using_collections_deque_page() {
 		fromQjava = new Queue(Helper.getDriver());
@@ -78,12 +78,12 @@ public class QueuePage extends Bclass{
 
 	@When("User clicks on Implementation using array")
 	public void user_clicks_on_implementation_using_array() {
-	    fromQjava.ImpleUsingArrBttn();
+		fromQjava.ImpleUsingArrBttn();
 	}
 
 	@Then("User lands on Implementation using array page")
 	public void user_lands_on_implementation_using_array_page() {
-	    fromQjava.OnImpleUsingArrpage();
+		fromQjava.OnImpleUsingArrpage();
 	}
 
 	@Given("User gets back Implementation using array page")
@@ -102,7 +102,7 @@ public class QueuePage extends Bclass{
 	public void user_lands_on_queue_operations_page() {
 		fromQjava.OnQueueOppage();
 	}
-	
+
 	@Given("User gets back on Queue Operations from Deletion page")
 	public void user_gets_back_on_queue_operations_from_deletion_page() {
 		fromQjava = new Queue(Helper.getDriver());

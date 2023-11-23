@@ -12,19 +12,19 @@ Feature: Handling Linkedlist options
     And User clicks on try me button
     Then User lands on tryEditor page
 
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Creating linked list page and uses the try me button
     Given User gets back on Intro page
@@ -32,20 +32,20 @@ Feature: Handling Linkedlist options
     Then User lands on Creating Linked List page
     And User clicks on try me button
     Then User lands on tryEditor page
-#
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Types of Linked List page and uses the try me button
     Given User gets back on Intro page from Creating Link list page
@@ -54,19 +54,19 @@ Feature: Handling Linkedlist options
     And User clicks on try me button
     Then User lands on tryEditor page
 
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Implement Linked List page and uses the try me button
     Given User gets back on Intro page from Types of Linked List page
@@ -75,19 +75,19 @@ Feature: Handling Linkedlist options
     And User clicks on try me button
     Then User lands on tryEditor page
 
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Traversal page and uses the try me button
     Given User gets back on Intro page from Implement Linked List page
@@ -95,20 +95,20 @@ Feature: Handling Linkedlist options
     Then User lands on Traversal page
     And User clicks on try me button
     Then User lands on tryEditor page
-#
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Insertion page and uses the try me button
     Given User gets back on Intro page from Traversal page
@@ -117,19 +117,19 @@ Feature: Handling Linkedlist options
     And User clicks on try me button
     Then User lands on tryEditor page
 
-  #Scenario: User redirected to try me page to run invalid code
-    #Given User lands on tryEditor page
-    #When User enters invalid code to run on editor
-      #| System.out.println("Hi Java"); |
-    #And User clicks Run to execute code
-    #Then User gets a error message and dismisses it
-#
-  #Scenario: User redirected to try me page to run python code
-    #Given User is on tryEditor page
-    #When User enters python code to run on editor
-      #| print 'hello'; |
-    #And User clicks Run to execute code
-    #Then User gets a valid output
+  Scenario: User redirected to try me page to run invalid code
+    Given User lands on tryEditor page
+    When User enters invalid code to run on editor
+      | System.out.println("Hi Java"); |
+    And User clicks Run to execute code
+    Then User gets a error message and dismisses it
+
+  Scenario: User redirected to try me page to run python code
+    Given User is on tryEditor page
+    When User enters python code to run on editor
+      | print 'hello'; |
+    And User clicks Run to execute code
+    Then User gets a valid output
 
   Scenario: User gets into Deletion page and uses the try me button
     Given User gets back on Intro page from Insertion page
